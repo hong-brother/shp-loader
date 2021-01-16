@@ -2,6 +2,7 @@ from qgis.core import (
     QgsVectorLayer
 )
 
+
 def load(path):
     try:
         layer = QgsVectorLayer(path, "LINKSHAPE_01", "ogr")
@@ -15,5 +16,3 @@ def load(path):
             print(row.attributes())
     except Exception as e:
         print(e)
-
-
